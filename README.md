@@ -3,12 +3,12 @@
 This will take the output of grabbing all your slack Emoji urls, saving it to json, and save the resulting images to file.
 
 ## Grabbing from Chrome Dev Tools
-Adapted from here: https://gist.github.com/dogeared/f8af0c03d96f75c8215731a29faf172c
+Adapted from here: https://gist.github.com/lmarkus/8722f56baf8c47045621
 
 1. Login to your team through the browser.
 1. Go to: `https://<team name>.slack.com/customize/emoji`
-1. Run the snippet on the browser's dev tools javascript console
-1. Save resulting JSON string to file
+1. Open browser's dev tools javascript console, look for `emoji.adminList` in the Network tab
+1. Either copy the response JSON object or copy the request as curl to save to file named `emojis.json`
 
 ## emojiGrab
 Pass the json file name into the go program, along with where you want to save the new emoji files.
